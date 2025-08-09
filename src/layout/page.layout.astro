@@ -1,0 +1,64 @@
+---
+import Footer from '../components/footer';
+import Header from '../components/header';
+import ReturnButton from '../components/return-button';
+import { siteConfig } from '../config/site.config';
+import '../styles/global.css';
+
+const { seo } = siteConfig;
+---
+
+<html lang="tr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
+        <meta name="author" content={seo.author} />
+        <meta name="robots" content={seo.robots} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="canonical" href={seo.canonical} />
+        {
+            seo.openGraph && (
+                <>
+                    <meta property="og:title" content={seo.openGraph.title} />
+                    <meta
+                        property="og:description"
+                        content={seo.openGraph.description}
+                    />
+                    <meta property="og:url" content={seo.openGraph.url} />
+                    <meta property="og:image" content={seo.openGraph.image} />
+                    <meta property="og:type" content={seo.openGraph.type} />
+                </>
+            )
+        }
+        {
+            seo.twitter && (
+                <>
+                    <meta name="twitter:card" content={seo.twitter.card} />
+                    <meta name="twitter:site" content={seo.twitter.site} />
+                    <meta
+                        name="twitter:creator"
+                        content={seo.twitter.creator}
+                    />
+                    <meta name="twitter:title" content={seo.twitter.title} />
+                    <meta
+                        name="twitter:description"
+                        content={seo.twitter.description}
+                    />
+                    <meta name="twitter:image" content={seo.twitter.image} />
+                </>
+            )
+        }
+    </head>
+    <body>
+        <Header client:load />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+        <ReturnButton client:load />
+    </body>
+</html>

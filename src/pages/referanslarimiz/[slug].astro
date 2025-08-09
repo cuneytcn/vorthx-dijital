@@ -1,0 +1,645 @@
+---
+import PageLayout from '../../layout/page.layout.astro';
+
+export async function getStaticPaths() {
+    return [
+        {
+            params: { slug: 'techshop-eticaret' },
+            props: {
+                project: {
+                    id: 'techshop-eticaret',
+                    title: 'TechShop E-ticaret Platformu',
+                    category: 'E-ticaret',
+                    client: 'TechShop',
+                    duration: '8 hafta',
+                    year: '2024',
+                    status: 'Tamamlandı',
+                    technologies: [
+                        'React',
+                        'Node.js',
+                        'MongoDB',
+                        'Stripe',
+                        'AWS',
+                    ],
+                    description:
+                        'Elektronik ürünler satan bir şirket için geliştirdiğimiz modern e-ticaret platformu. Gelişmiş ödeme sistemi, stok yönetimi ve müşteri paneli.',
+                    challenge:
+                        'Müşterimiz mevcut eski e-ticaret sisteminin performans sorunları yaşadığını ve modern kullanıcı deneyimi sunmadığını belirtti. Ayrıca mobil uyumluluk eksikliği ve yavaş yükleme süreleri büyük sorunlardı.',
+                    solution:
+                        'Modern React tabanlı frontend, Node.js backend ve MongoDB veritabanı kullanarak yüksek performanslı bir platform geliştirdik. PWA teknolojisi ile mobil deneyimi optimize ettik.',
+                    results: [
+                        'Sayfa yükleme hızı %70 iyileşti',
+                        'Mobil dönüşüm oranı %85 arttı',
+                        'Toplam satışlarda %300 artış',
+                        'Müşteri memnuniyet skoru 4.8/5',
+                    ],
+                    features: [
+                        'Responsive tasarım',
+                        'Gelişmiş arama ve filtreleme',
+                        'Güvenli ödeme sistemi',
+                        'Stok yönetimi',
+                        'Müşteri paneli',
+                        'Admin dashboard',
+                        'SEO optimizasyonu',
+                        'Performans optimizasyonu',
+                    ],
+                    images: [
+                        '/images/projects/techshop/hero.jpg',
+                        '/images/projects/techshop/dashboard.jpg',
+                        '/images/projects/techshop/mobile.jpg',
+                        '/images/projects/techshop/admin.jpg',
+                    ],
+                    testimonial: {
+                        text: 'Vorthx Dijital ekibi ile çalışmak harika bir deneyimdi. E-ticaret sitemizi sıfırdan kurdular ve satışlarımız %300 arttı. Profesyonel yaklaşımları ve zamanında teslimatları mükemmeldi.',
+                        author: 'Ahmet Kaya',
+                        position: 'TechShop CEO',
+                        avatar: 'AK',
+                    },
+                },
+            },
+        },
+        {
+            params: { slug: 'ozyurt-insaat' },
+            props: {
+                project: {
+                    id: 'ozyurt-insaat',
+                    title: 'Özyurt İnşaat Kurumsal Web Sitesi',
+                    category: 'Kurumsal',
+                    client: 'Özyurt İnşaat',
+                    duration: '6 hafta',
+                    year: '2024',
+                    status: 'Tamamlandı',
+                    technologies: [
+                        'WordPress',
+                        'PHP',
+                        'MySQL',
+                        'JavaScript',
+                        'CSS3',
+                    ],
+                    description:
+                        'İnşaat sektörünün öncü firmalarından biri için tasarladığımız modern ve kullanıcı dostu kurumsal web sitesi. Proje galerisi ve iletişim modülleri.',
+                    challenge:
+                        'Müşterimizin eski web sitesi çok eski teknolojilerle yapılmıştı ve mobil cihazlarda düzgün görünmüyordu. Ayrıca projelerini etkili bir şekilde sergileyemiyorlardı.',
+                    solution:
+                        'Modern WordPress teması ile responsive tasarım geliştirdik. Proje galerisi, hizmet sayfaları ve iletişim formları entegrasyonu gerçekleştirdik.',
+                    results: [
+                        'Web sitesi trafiği %120 arttı',
+                        'Mobil kullanıcı deneyimi %90 iyileşti',
+                        'İletişim form doldurma oranı %65 arttı',
+                        'Google PageSpeed skoru 95/100',
+                    ],
+                    features: [
+                        'Responsive kurumsal tasarım',
+                        'Proje galerisi',
+                        'Hizmet sayfaları',
+                        'İletişim formları',
+                        'SEO optimizasyonu',
+                        'Google Analytics entegrasyonu',
+                        'Sosyal medya entegrasyonu',
+                        'Admin paneli',
+                    ],
+                    images: [
+                        '/images/projects/ozyurt/hero.jpg',
+                        '/images/projects/ozyurt/projects.jpg',
+                        '/images/projects/ozyurt/services.jpg',
+                        '/images/projects/ozyurt/contact.jpg',
+                    ],
+                    testimonial: {
+                        text: 'Kurumsal web sitemizi yenilemek için Vorthx ile çalıştık. Sonuç harika oldu! Modern tasarım ve kullanıcı dostu arayüz sayesinde müşteri memnuniyetimiz çok arttı.',
+                        author: 'Mehmet Özyurt',
+                        position: 'Özyurt İnşaat Genel Müdürü',
+                        avatar: 'MÖ',
+                    },
+                },
+            },
+        },
+        {
+            params: { slug: 'fitlife-app' },
+            props: {
+                project: {
+                    id: 'fitlife-app',
+                    title: 'FitLife Fitness Mobil Uygulaması',
+                    category: 'Mobil Uygulama',
+                    client: 'FitLife Gym',
+                    duration: '12 hafta',
+                    year: '2024',
+                    status: 'Devam Ediyor',
+                    technologies: [
+                        'React Native',
+                        'Firebase',
+                        'Redux',
+                        'Expo',
+                        'TypeScript',
+                    ],
+                    description:
+                        'Kişisel antrenörlük hizmeti veren bir şirket için geliştirdiğimiz kapsamlı fitness uygulaması. Antrenman planları, beslenme takibi ve ilerleme raporları.',
+                    challenge:
+                        'Müşterimiz üyelerinin gym dışında da motivasyonunu korumak ve antrenman programlarını takip etmelerini sağlamak istiyordu. Manuel takip süreçleri verimsizdi.',
+                    solution:
+                        'React Native ile cross-platform mobil uygulama geliştirdik. Firebase backend ile gerçek zamanlı veri senkronizasyonu ve push notification özellikleri ekledik.',
+                    results: [
+                        'Üye aktivitesi %150 arttı',
+                        'Gym üyelik yenileme oranı %80 iyileşti',
+                        'Antrenman takip oranı %200 arttı',
+                        'Kullanıcı memnuniyet skoru 4.7/5',
+                    ],
+                    features: [
+                        'Kişiselleştirilmiş antrenman planları',
+                        'Beslenme takibi',
+                        'İlerleme raporları',
+                        'Push notifications',
+                        'Sosyal özellikler',
+                        'Video antrenman rehberleri',
+                        'Kalori hesaplayıcı',
+                        'Antrenör iletişimi',
+                    ],
+                    images: [
+                        '/images/projects/fitlife/hero.jpg',
+                        '/images/projects/fitlife/dashboard.jpg',
+                        '/images/projects/fitlife/workouts.jpg',
+                        '/images/projects/fitlife/nutrition.jpg',
+                    ],
+                    testimonial: {
+                        text: 'FitLife uygulaması sayesinde üyelerimizin gym dışında da motivasyonunu koruyabiliyoruz. Uygulama kullanımı çok kolay ve üyelerimiz çok memnun.',
+                        author: 'Elif Demir',
+                        position: 'FitLife Gym Sahibi',
+                        avatar: 'ED',
+                    },
+                },
+            },
+        },
+        {
+            params: { slug: 'moda-boutique' },
+            props: {
+                project: {
+                    id: 'moda-boutique',
+                    title: 'Moda Boutique Dijital Pazarlama',
+                    category: 'Dijital Pazarlama',
+                    client: 'Moda Boutique',
+                    duration: '4 ay',
+                    year: '2024',
+                    status: 'Tamamlandı',
+                    technologies: [
+                        'Google Ads',
+                        'Facebook Ads',
+                        'Instagram',
+                        'Google Analytics',
+                        'SEO',
+                    ],
+                    description:
+                        'Kadın giyim mağazası için geliştirdiğimiz 360° dijital pazarlama stratejisi. Social media, Google Ads ve influencer marketing entegrasyonu.',
+                    challenge:
+                        'Müşterimizin online varlığı çok zayıftı ve dijital kanallardan satış yapamıyordu. Hedef kitleye ulaşma konusunda zorlanıyorlardı.',
+                    solution:
+                        'Kapsamlı dijital pazarlama stratejisi geliştirdik. Google Ads, Facebook/Instagram reklamları, SEO optimizasyonu ve influencer işbirlikleri yaptık.',
+                    results: [
+                        'Online satışlarda %400 artış',
+                        'Instagram takipçi sayısı %300 arttı',
+                        'Web sitesi trafiği %250 arttı',
+                        'ROAS (Return on Ad Spend) 4.2x',
+                    ],
+                    features: [
+                        'Google Ads kampanyaları',
+                        'Facebook/Instagram reklamları',
+                        'SEO optimizasyonu',
+                        'İçerik pazarlaması',
+                        'Influencer işbirlikleri',
+                        'E-mail marketing',
+                        'Sosyal medya yönetimi',
+                        'Analitik raporlama',
+                    ],
+                    images: [
+                        '/images/projects/moda/hero.jpg',
+                        '/images/projects/moda/campaigns.jpg',
+                        '/images/projects/moda/social.jpg',
+                        '/images/projects/moda/analytics.jpg',
+                    ],
+                    testimonial: {
+                        text: 'Dijital pazarlama stratejimizi yeniden düzenlemek için başvurduk. Sonuçlar inanılmazdı! Online satışlarımız 6 ay içinde ikiye katlandı. Kesinlikle tavsiye ederim.',
+                        author: 'Selin Yılmaz',
+                        position: 'Moda Boutique Sahibi',
+                        avatar: 'SY',
+                    },
+                },
+            },
+        },
+    ];
+}
+
+const { project } = Astro.props;
+---
+
+<PageLayout>
+    <!-- HERO SECTION -->
+    <section
+        class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-24 lg:py-32">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div
+                class="absolute top-16 left-16 h-32 w-32 rotate-45 animate-pulse border-2 border-white">
+            </div>
+            <div
+                class="absolute right-16 bottom-16 h-24 w-24 rotate-12 animate-pulse border-2 border-white delay-300">
+            </div>
+        </div>
+
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+                <!-- Project Info -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <span
+                                class="inline-flex items-center rounded-full bg-white/20 px-3 py-1 text-sm font-medium text-white/90 backdrop-blur-sm">
+                                {project.category}
+                            </span>
+                            <span
+                                class={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium backdrop-blur-sm ${
+                                    project.status === 'Tamamlandı'
+                                        ? 'bg-green-500/20 text-green-100'
+                                        : 'bg-blue-500/20 text-blue-100'
+                                }`}>
+                                {project.status}
+                            </span>
+                        </div>
+
+                        <h1
+                            class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                            {project.title}
+                        </h1>
+
+                        <p class="text-xl leading-relaxed text-blue-100">
+                            {project.description}
+                        </p>
+                    </div>
+
+                    <!-- Project Meta -->
+                    <div class="grid grid-cols-2 gap-6 sm:grid-cols-3">
+                        <div>
+                            <div class="text-sm font-medium text-blue-200">
+                                Müşteri
+                            </div>
+                            <div class="text-lg font-semibold text-white">
+                                {project.client}
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-blue-200">
+                                Süre
+                            </div>
+                            <div class="text-lg font-semibold text-white">
+                                {project.duration}
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-blue-200">
+                                Yıl
+                            </div>
+                            <div class="text-lg font-semibold text-white">
+                                {project.year}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="space-y-3">
+                        <div class="text-sm font-medium text-blue-200">
+                            Kullanılan Teknolojiler
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                project.technologies.map((tech) => (
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
+                                        {tech}
+                                    </span>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Image -->
+                <div class="relative">
+                    <div
+                        class="aspect-[4/3] overflow-hidden rounded-2xl bg-white/10 backdrop-blur-sm">
+                        <div class="flex h-full items-center justify-center">
+                            <div class="text-center text-white/60">
+                                <svg
+                                    class="mx-auto mb-4 h-16 w-16"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                    ></path>
+                                </svg>
+                                <p class="text-lg font-medium">Proje Görseli</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT DETAILS -->
+    <section class="py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-16 lg:grid-cols-3">
+                <!-- Main Content -->
+                <div class="space-y-12 lg:col-span-2">
+                    <!-- Challenge -->
+                    <div class="space-y-6">
+                        <h2
+                            class="text-3xl font-bold tracking-tight text-gray-900">
+                            Proje Zorluğu
+                        </h2>
+                        <p class="text-lg leading-8 text-gray-600">
+                            {project.challenge}
+                        </p>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="space-y-6">
+                        <h2
+                            class="text-3xl font-bold tracking-tight text-gray-900">
+                            Çözümümüz
+                        </h2>
+                        <p class="text-lg leading-8 text-gray-600">
+                            {project.solution}
+                        </p>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="space-y-6">
+                        <h2
+                            class="text-3xl font-bold tracking-tight text-gray-900">
+                            Elde Edilen Sonuçlar
+                        </h2>
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            {
+                                project.results.map((result, index) => (
+                                    <div class="flex items-start space-x-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-100">
+                                                <svg
+                                                    class="h-5 w-5 text-green-600"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-600">{result}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Project Gallery -->
+                    <div class="space-y-6">
+                        <h2
+                            class="text-3xl font-bold tracking-tight text-gray-900">
+                            Proje Galerisi
+                        </h2>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            {
+                                project.images.map((image, index) => (
+                                    <div class="aspect-[16/10] overflow-hidden rounded-xl bg-gray-100">
+                                        <div class="flex h-full items-center justify-center">
+                                            <div class="text-center text-gray-400">
+                                                <svg
+                                                    class="mx-auto mb-2 h-12 w-12"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="1.5"
+                                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                                    />
+                                                </svg>
+                                                <p class="text-sm">
+                                                    Proje Görseli {index + 1}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-8">
+                    <!-- Features -->
+                    <div class="rounded-2xl bg-gray-50 p-8">
+                        <h3 class="mb-6 text-xl font-bold text-gray-900">
+                            Proje Özellikleri
+                        </h3>
+                        <div class="space-y-3">
+                            {
+                                project.features.map((feature) => (
+                                    <div class="flex items-center space-x-3">
+                                        <div class="flex-shrink-0">
+                                            <svg
+                                                class="h-5 w-5 text-indigo-600"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M5 13l4 4L19 7"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <span class="text-gray-600">
+                                            {feature}
+                                        </span>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div class="rounded-2xl bg-white p-8 shadow-lg">
+                        <div class="space-y-6">
+                            <div
+                                class="flex items-center space-x-1 text-yellow-400">
+                                {
+                                    [...Array(5)].map((_, i) => (
+                                        <svg
+                                            class="h-5 w-5"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    ))
+                                }
+                            </div>
+                            <blockquote class="text-gray-600">
+                                "{project.testimonial.text}"
+                            </blockquote>
+                            <div class="flex items-center space-x-4">
+                                <div
+                                    class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-indigo-400 to-purple-600">
+                                    <span class="font-bold text-white"
+                                        >{project.testimonial.avatar}</span
+                                    >
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">
+                                        {project.testimonial.author}
+                                    </div>
+                                    <div class="text-sm text-gray-600">
+                                        {project.testimonial.position}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div
+                        class="rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 p-8 text-white">
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold">
+                                Benzer Bir Proje İstiyor musunuz?
+                            </h3>
+                            <p class="text-blue-100">
+                                Size özel çözümler geliştirmek için iletişime
+                                geçin.
+                            </p>
+                            <a
+                                href="/iletisim"
+                                class="inline-flex items-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-indigo-600 transition-all duration-200 hover:bg-gray-50">
+                                İletişime Geç
+                                <svg
+                                    class="ml-2 h-4 w-4"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RELATED PROJECTS -->
+    <section class="bg-gray-50 py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto mb-16 max-w-2xl text-center">
+                <h2
+                    class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Diğer Projelerimiz
+                </h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                    Benzer başarılı projelerimizi keşfedin
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Bu bölümde diğer projelerin preview'ları gösterilecek -->
+                <a href="/referanslarimiz/techshop-eticaret" class="group">
+                    <div
+                        class="overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+                        <div
+                            class="aspect-[16/9] bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+                            <div class="flex h-full items-end">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">
+                                        TechShop E-ticaret
+                                    </h3>
+                                    <p class="text-gray-600">
+                                        E-ticaret Platformu
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/referanslarimiz/ozyurt-insaat" class="group">
+                    <div
+                        class="overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+                        <div
+                            class="aspect-[16/9] bg-gradient-to-br from-purple-50 to-pink-100 p-6">
+                            <div class="flex h-full items-end">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">
+                                        Özyurt İnşaat
+                                    </h3>
+                                    <p class="text-gray-600">
+                                        Kurumsal Web Sitesi
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/referanslarimiz/moda-boutique" class="group">
+                    <div
+                        class="overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+                        <div
+                            class="aspect-[16/9] bg-gradient-to-br from-orange-50 to-red-100 p-6">
+                            <div class="flex h-full items-end">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">
+                                        Moda Boutique
+                                    </h3>
+                                    <p class="text-gray-600">
+                                        Dijital Pazarlama
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a
+                    href="/referanslarimiz"
+                    class="inline-flex items-center rounded-lg bg-indigo-600 px-6 py-3 text-base font-semibold text-white transition-all duration-200 hover:bg-indigo-700">
+                    Tüm Referansları Görüntüle
+                    <svg
+                        class="ml-2 h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</PageLayout>

@@ -1,0 +1,457 @@
+---
+import PageLayout from '../layout/page.layout.astro';
+---
+
+<PageLayout>
+    <!-- HERO SECTION -->
+    <section
+        class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-24 lg:py-32">
+        <!-- Background Animation Elements -->
+        <div class="absolute inset-0">
+            <div
+                class="absolute top-10 left-10 h-20 w-20 animate-pulse rounded-full bg-white opacity-10">
+            </div>
+            <div
+                class="absolute right-10 bottom-10 h-16 w-16 animate-pulse rounded-full bg-white opacity-10 delay-1000">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/4 h-12 w-12 animate-pulse rounded-full bg-white opacity-10 delay-500">
+            </div>
+        </div>
+
+        <div class="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
+            <div class="space-y-6">
+                <div
+                    class="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm">
+                    <span class="mr-2">🍪</span>
+                    Yasal Belgeler
+                </div>
+
+                <h1
+                    class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    <span class="block">Çerez</span>
+                    <span
+                        class="block bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 bg-clip-text text-transparent">
+                        Politikası
+                    </span>
+                </h1>
+
+                <p
+                    class="mx-auto max-w-2xl text-xl leading-relaxed text-blue-100">
+                    Web sitemizde kullandığımız çerezler hakkında detaylı
+                    bilgiler ve çerez tercihlerinizi yönetme seçenekleri.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="bg-white py-20 lg:py-28">
+        <div class="mx-auto max-w-4xl px-6 lg:px-8">
+            <div class="prose prose-lg max-w-none">
+                <!-- Son Güncelleme -->
+                <div class="mb-12 rounded-lg bg-gray-50 p-6">
+                    <p class="mb-0 text-sm text-gray-600">
+                        <strong>Son Güncelleme:</strong> 1 Ocak 2024<br />
+                        <strong>Yürürlük Tarihi:</strong> 1 Ocak 2024
+                    </p>
+                </div>
+
+                <!-- Giriş -->
+                <h2>1. Çerez Nedir?</h2>
+                <p>
+                    Çerezler (cookies), web sitelerini ziyaret ettiğinizde
+                    tarayıcınıza kaydedilen küçük metin dosyalarıdır. Bu
+                    dosyalar, web sitesinin daha iyi çalışmasını, kullanıcı
+                    deneyiminin iyileştirilmesini ve site performansının analiz
+                    edilmesini sağlar.
+                </p>
+
+                <!-- Çerez Türleri -->
+                <h2>2. Kullandığımız Çerez Türleri</h2>
+
+                <h3>2.1 Zorunlu Çerezler</h3>
+                <p>
+                    Web sitesinin temel işlevlerini yerine getirmesi için
+                    gerekli olan çerezlerdir. Bu çerezler olmadan site düzgün
+                    çalışamaz.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Oturum Çerezleri:</strong> Sayfa navigasyonu ve güvenlik
+                    </li>
+                    <li>
+                        <strong>Güvenlik Çerezleri:</strong> Zararlı saldırılara
+                        karşı koruma
+                    </li>
+                    <li>
+                        <strong>Yük Dengeleme:</strong> Site performansını optimize
+                        etme
+                    </li>
+                </ul>
+
+                <h3>2.2 Performans Çerezleri</h3>
+                <p>
+                    Web sitesinin performansını ölçmek ve iyileştirmek için
+                    kullanılan çerezlerdir.
+                </p>
+                <ul>
+                    <li>Sayfa yükleme süreleri</li>
+                    <li>Ziyaretçi sayısı ve davranışları</li>
+                    <li>En popüler sayfalar</li>
+                    <li>Hata raporları</li>
+                </ul>
+
+                <h3>2.3 İşlevsel Çerezler</h3>
+                <p>
+                    Kullanıcı tercihlerini hatırlamak ve kişiselleştirilmiş
+                    deneyim sunmak için kullanılır.
+                </p>
+                <ul>
+                    <li>Dil tercihleri</li>
+                    <li>Tema seçimleri</li>
+                    <li>Form bilgileri</li>
+                    <li>Gezinme geçmişi</li>
+                </ul>
+
+                <h3>2.4 Hedefleme/Pazarlama Çerezleri</h3>
+                <p>
+                    Kullanıcıların ilgilendiği konular hakkında bilgi toplamak
+                    ve kişiselleştirilmiş reklamlar göstermek için kullanılır.
+                </p>
+                <ul>
+                    <li>İlgi alanları analizi</li>
+                    <li>Retargeting kampanyaları</li>
+                    <li>Sosyal medya entegrasyonu</li>
+                    <li>Reklam performansı ölçümü</li>
+                </ul>
+
+                <!-- Üçüncü Parti Çerezler -->
+                <h2>3. Üçüncü Parti Çerezler</h2>
+                <p>
+                    Web sitemizde aşağıdaki üçüncü parti hizmetlerden gelen
+                    çerezler kullanılmaktadır:
+                </p>
+
+                <h3>3.1 Google Analytics</h3>
+                <ul>
+                    <li>
+                        <strong>Amaç:</strong> Site trafiği ve kullanıcı davranışı
+                        analizi
+                    </li>
+                    <li><strong>Çerez Adları:</strong> _ga, _gid, _gat</li>
+                    <li><strong>Süre:</strong> 2 yıl</li>
+                    <li>
+                        <strong>Daha Fazla Bilgi:</strong>
+                        <a
+                            href="https://policies.google.com/privacy"
+                            target="_blank"
+                            class="text-indigo-600 hover:text-indigo-800">
+                            Google Gizlilik Politikası
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>3.2 Google Tag Manager</h3>
+                <ul>
+                    <li><strong>Amaç:</strong> Çerez ve script yönetimi</li>
+                    <li><strong>Çerez Adları:</strong> _gcl_au, _gac_</li>
+                    <li><strong>Süre:</strong> 90 gün</li>
+                </ul>
+
+                <h3>3.3 Facebook Pixel</h3>
+                <ul>
+                    <li>
+                        <strong>Amaç:</strong> Sosyal medya pazarlama ve analiz
+                    </li>
+                    <li><strong>Çerez Adları:</strong> _fbp, _fbc</li>
+                    <li><strong>Süre:</strong> 90 gün</li>
+                </ul>
+
+                <!-- Çerez Yönetimi -->
+                <h2>4. Çerez Tercihlerinizi Yönetme</h2>
+
+                <h3>4.1 Tarayıcı Ayarları</h3>
+                <p>
+                    Çoğu web tarayıcısı çerezleri otomatik olarak kabul eder,
+                    ancak bunu tarayıcı ayarlarından değiştirebilirsiniz:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Chrome:</strong> Ayarlar → Gizlilik ve güvenlik →
+                        Çerezler
+                    </li>
+                    <li>
+                        <strong>Firefox:</strong> Ayarlar → Gizlilik ve güvenlik
+                        → Çerezler
+                    </li>
+                    <li>
+                        <strong>Safari:</strong> Tercihler → Gizlilik → Çerezler
+                    </li>
+                    <li>
+                        <strong>Edge:</strong> Ayarlar → Çerezler ve site izinleri
+                    </li>
+                </ul>
+
+                <h3>4.2 Çerez Tercih Merkezi</h3>
+                <div
+                    class="rounded-lg border border-indigo-200 bg-indigo-50 p-6">
+                    <h4 class="mb-4 text-lg font-semibold text-indigo-900">
+                        Çerez Kategorileri
+                    </h4>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="font-medium text-gray-900"
+                                    >Zorunlu Çerezler</span
+                                >
+                                <p class="text-sm text-gray-600">
+                                    Site işlevselliği için gerekli
+                                </p>
+                            </div>
+                            <span
+                                class="rounded bg-gray-100 px-2 py-1 text-sm text-gray-500"
+                                >Her zaman aktif</span
+                            >
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="font-medium text-gray-900"
+                                    >Performans Çerezleri</span
+                                >
+                                <p class="text-sm text-gray-600">
+                                    Site performansını iyileştirme
+                                </p>
+                            </div>
+                            <button
+                                class="rounded bg-indigo-600 px-3 py-1 text-sm text-white hover:bg-indigo-700">
+                                Aktif
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="font-medium text-gray-900"
+                                    >İşlevsel Çerezler</span
+                                >
+                                <p class="text-sm text-gray-600">
+                                    Kişiselleştirme ve tercihler
+                                </p>
+                            </div>
+                            <button
+                                class="rounded bg-gray-300 px-3 py-1 text-sm text-gray-700 hover:bg-gray-400">
+                                Pasif
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="font-medium text-gray-900"
+                                    >Pazarlama Çerezleri</span
+                                >
+                                <p class="text-sm text-gray-600">
+                                    Hedefli reklamlar
+                                </p>
+                            </div>
+                            <button
+                                class="rounded bg-gray-300 px-3 py-1 text-sm text-gray-700 hover:bg-gray-400">
+                                Pasif
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex gap-3">
+                        <button
+                            class="rounded bg-indigo-600 px-4 py-2 font-medium text-white hover:bg-indigo-700">
+                            Tercihleri Kaydet
+                        </button>
+                        <button
+                            class="rounded bg-green-600 px-4 py-2 font-medium text-white hover:bg-green-700">
+                            Tümünü Kabul Et
+                        </button>
+                        <button
+                            class="rounded bg-gray-600 px-4 py-2 font-medium text-white hover:bg-gray-700">
+                            Tümünü Reddet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Çerez Listesi -->
+                <h2>5. Detaylı Çerez Listesi</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                                    Çerez Adı
+                                </th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                                    Kategori
+                                </th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                                    Süre
+                                </th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase">
+                                    Açıklama
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                                <td
+                                    class="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900">
+                                    session_id
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                                    Zorunlu
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                                    Oturum
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">
+                                    Kullanıcı oturumunu takip eder
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    class="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900">
+                                    _ga
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                                    Analitik
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                                    2 yıl
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">
+                                    Google Analytics kullanıcı kimliği
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    class="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900">
+                                    _fbp
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                                    Pazarlama
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                                    90 gün
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">
+                                    Facebook Pixel takibi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    class="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900">
+                                    preferences
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                                    İşlevsel
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-sm whitespace-nowrap text-gray-500">
+                                    1 yıl
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">
+                                    Kullanıcı tercihlerini saklar
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Çerez Silme -->
+                <h2>6. Çerezleri Silme</h2>
+                <p>
+                    Bilgisayarınızda saklanan çerezleri istediğiniz zaman
+                    silebilirsiniz:
+                </p>
+                <ul>
+                    <li>Tarayıcı geçmişini temizleme</li>
+                    <li>Çerez ayarlarından manuel silme</li>
+                    <li>Gizli/özel gezinme modu kullanma</li>
+                    <li>Tarayıcı eklentileri ile yönetme</li>
+                </ul>
+
+                <!-- İletişim -->
+                <h2>7. İletişim</h2>
+                <p>
+                    Çerez politikamız hakkında sorularınız için bizimle
+                    iletişime geçebilirsiniz:
+                </p>
+                <div class="rounded-lg bg-gray-50 p-6">
+                    <p class="mb-2">
+                        <strong>E-posta:</strong> privacy@vorthxdijital.com
+                    </p>
+                    <p class="mb-2">
+                        <strong>Telefon:</strong> +90 555 123 45 67
+                    </p>
+                    <p class="mb-0">
+                        <strong>Adres:</strong> Maslak Mah. Büyükdere Cd. No:123
+                        K:5 D:12 Şişli/İstanbul
+                    </p>
+                </div>
+
+                <!-- Güncellemeler -->
+                <h2>8. Politika Güncellemeleri</h2>
+                <p>
+                    Bu çerez politikasını gerektiğinde güncelleyebiliriz. Önemli
+                    değişiklikler olduğunda sizi bilgilendireceğiz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section
+        class="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <h2
+                    class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Çerez Tercihlerinizi Yönetin
+                </h2>
+                <p class="mt-6 text-xl leading-8 text-blue-100">
+                    İstediğiniz zaman çerez ayarlarınızı değiştirebilirsiniz.
+                </p>
+                <div class="mt-10">
+                    <button
+                        class="inline-flex items-center rounded-lg bg-white px-8 py-4 text-lg font-semibold text-indigo-600 shadow-lg transition-all duration-200 hover:bg-gray-50">
+                        <svg
+                            class="mr-2 h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"
+                            ></path>
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Çerez Ayarları
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</PageLayout>

@@ -1,0 +1,240 @@
+---
+import PageLayout from '../layout/page.layout.astro';
+---
+
+<PageLayout>
+    <!-- HERO SECTION -->
+    <section
+        class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-24 lg:py-32">
+        <!-- Background Animation Elements -->
+        <div class="absolute inset-0">
+            <div
+                class="absolute top-10 left-10 h-20 w-20 animate-pulse rounded-full bg-white opacity-10">
+            </div>
+            <div
+                class="absolute right-10 bottom-10 h-16 w-16 animate-pulse rounded-full bg-white opacity-10 delay-1000">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/4 h-12 w-12 animate-pulse rounded-full bg-white opacity-10 delay-500">
+            </div>
+        </div>
+
+        <div class="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
+            <div class="space-y-6">
+                <div
+                    class="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm">
+                    <span class="mr-2">🔒</span>
+                    Yasal Belgeler
+                </div>
+
+                <h1
+                    class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    <span class="block">Gizlilik</span>
+                    <span
+                        class="block bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 bg-clip-text text-transparent">
+                        Politikası
+                    </span>
+                </h1>
+
+                <p
+                    class="mx-auto max-w-2xl text-xl leading-relaxed text-blue-100">
+                    Kişisel verilerinizin korunması bizim için önceliklidir. Bu
+                    politika ile verilerinizi nasıl topladığımızı ve
+                    koruduğumuzu açıklıyoruz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="bg-white py-20 lg:py-28">
+        <div class="mx-auto max-w-4xl px-6 lg:px-8">
+            <div class="prose prose-lg max-w-none">
+                <!-- Son Güncelleme -->
+                <div class="mb-12 rounded-lg bg-gray-50 p-6">
+                    <p class="mb-0 text-sm text-gray-600">
+                        <strong>Son Güncelleme:</strong> 1 Ocak 2024<br />
+                        <strong>Yürürlük Tarihi:</strong> 1 Ocak 2024
+                    </p>
+                </div>
+
+                <!-- Giriş -->
+                <h2>1. Giriş</h2>
+                <p>
+                    VorthX Dijital olarak, kişisel verilerinizin gizliliğini
+                    korumak ve 6698 sayılı Kişisel Verilerin Korunması Kanunu
+                    (KVKK) ile Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR)
+                    hükümlerine uygun davranmak önceliğimizdir.
+                </p>
+
+                <!-- Toplanan Veriler -->
+                <h2>2. Toplanan Kişisel Veriler</h2>
+                <p>
+                    Web sitemizi ziyaret ettiğinizde ve hizmetlerimizi
+                    kullandığınızda aşağıdaki verileri toplayabiliriz:
+                </p>
+
+                <h3>2.1 Kimlik Bilgileri</h3>
+                <ul>
+                    <li>Ad ve soyad</li>
+                    <li>E-posta adresi</li>
+                    <li>Telefon numarası</li>
+                    <li>Şirket bilgileri (varsa)</li>
+                </ul>
+
+                <h3>2.2 İletişim Bilgileri</h3>
+                <ul>
+                    <li>Posta adresi</li>
+                    <li>Faturalama adresi</li>
+                    <li>Teslimat adresi</li>
+                </ul>
+
+                <h3>2.3 Teknik Veriler</h3>
+                <ul>
+                    <li>IP adresi</li>
+                    <li>Tarayıcı türü ve versiyonu</li>
+                    <li>İşletim sistemi</li>
+                    <li>Ziyaret edilen sayfalar</li>
+                    <li>Çerez verileri</li>
+                </ul>
+
+                <!-- Veri Toplama Amaçları -->
+                <h2>3. Kişisel Verilerin İşlenme Amaçları</h2>
+                <p>Kişisel verilerinizi aşağıdaki amaçlarla işlemekteyiz:</p>
+                <ul>
+                    <li>Hizmet sunumu ve müşteri memnuniyeti</li>
+                    <li>İletişim kurma ve bilgilendirme</li>
+                    <li>Teklifler ve kampanyalar hakkında bilgilendirme</li>
+                    <li>Web sitesi performansını iyileştirme</li>
+                    <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+                    <li>Güvenlik önlemlerinin alınması</li>
+                </ul>
+
+                <!-- Veri Paylaşımı -->
+                <h2>4. Kişisel Verilerin Paylaşılması</h2>
+                <p>
+                    Kişisel verilerinizi, açık rızanız olmadan üçüncü kişilerle
+                    paylaşmayız. Ancak aşağıdaki durumlarda verileriniz
+                    paylaşılabilir:
+                </p>
+                <ul>
+                    <li>Yasal yükümlülükler gereği</li>
+                    <li>Mahkeme kararı ile</li>
+                    <li>
+                        Hizmet verdiğimiz alt yüklenicilerle (güvenlik önlemleri
+                        alınarak)
+                    </li>
+                    <li>İş ortaklarımızla (sadece gerekli ölçüde)</li>
+                </ul>
+
+                <!-- Veri Güvenliği -->
+                <h2>5. Veri Güvenliği</h2>
+                <p>
+                    Kişisel verilerinizin güvenliğini sağlamak için teknik ve
+                    idari önlemler almaktayız:
+                </p>
+                <ul>
+                    <li>SSL sertifikası ile şifreli veri iletimi</li>
+                    <li>Güvenli sunucu altyapısı</li>
+                    <li>Düzenli güvenlik güncellemeleri</li>
+                    <li>Erişim kontrolü ve yetkilendirme</li>
+                    <li>Veri yedekleme ve kurtarma sistemleri</li>
+                </ul>
+
+                <!-- Çerezler -->
+                <h2>6. Çerezler (Cookies)</h2>
+                <p>
+                    Web sitemizde kullanıcı deneyimini iyileştirmek için
+                    çerezler kullanmaktayız. Çerez kullanımı hakkında detaylı
+                    bilgi için
+                    <a
+                        href="/cerez-politikasi"
+                        class="text-indigo-600 hover:text-indigo-800">
+                        Çerez Politikamızı
+                    </a> inceleyebilirsiniz.
+                </p>
+
+                <!-- Haklarınız -->
+                <h2>7. Kişisel Veri Sahibi Olarak Haklarınız</h2>
+                <p>KVKK kapsamında aşağıdaki haklara sahipsiniz:</p>
+                <ul>
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                    <li>İşlenen verileriniz hakkında bilgi talep etme</li>
+                    <li>
+                        Verilerin işlenme amacını ve bunların amacına uygun
+                        kullanılıp kullanılmadığını öğrenme
+                    </li>
+                    <li>
+                        Verilerin eksik veya yanlış işlenmiş olması halinde
+                        bunların düzeltilmesini isteme
+                    </li>
+                    <li>Verilerin silinmesini veya yok edilmesini isteme</li>
+                    <li>Verilerinizin işlenmesine itiraz etme</li>
+                </ul>
+
+                <!-- İletişim -->
+                <h2>8. İletişim</h2>
+                <p>
+                    Gizlilik politikamız hakkında sorularınız için bizimle
+                    iletişime geçebilirsiniz:
+                </p>
+                <div class="rounded-lg bg-gray-50 p-6">
+                    <p class="mb-2">
+                        <strong>E-posta:</strong> privacy@vorthxdijital.com
+                    </p>
+                    <p class="mb-2">
+                        <strong>Telefon:</strong> +90 555 123 45 67
+                    </p>
+                    <p class="mb-0">
+                        <strong>Adres:</strong> Maslak Mah. Büyükdere Cd. No:123
+                        K:5 D:12 Şişli/İstanbul
+                    </p>
+                </div>
+
+                <!-- Değişiklikler -->
+                <h2>9. Politika Değişiklikleri</h2>
+                <p>
+                    Bu gizlilik politikasını zaman zaman güncelleyebiliriz.
+                    Önemli değişiklikler durumunda sizi bilgilendireceğiz.
+                    Politikayı düzenli olarak gözden geçirmenizi öneririz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section
+        class="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <h2
+                    class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Sorularınız mı var?
+                </h2>
+                <p class="mt-6 text-xl leading-8 text-blue-100">
+                    Gizlilik politikamız hakkında merak ettikleriniz için bize
+                    ulaşın.
+                </p>
+                <div class="mt-10">
+                    <a
+                        href="/iletisim"
+                        class="inline-flex items-center rounded-lg bg-white px-8 py-4 text-lg font-semibold text-indigo-600 shadow-lg transition-all duration-200 hover:bg-gray-50">
+                        <svg
+                            class="mr-2 h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                            ></path>
+                        </svg>
+                        İletişime Geç
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</PageLayout>
