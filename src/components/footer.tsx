@@ -104,7 +104,7 @@ export default function Footer() {
                                     <li key={index}>
                                         <a
                                             href={service.path}
-                                            className="text-gray-600 transition-colors hover:font-medium hover:text-indigo-600">
+                                            className="text-gray-600 transition-colors hover:text-indigo-600">
                                             {service.label}
                                         </a>
                                     </li>
@@ -122,7 +122,7 @@ export default function Footer() {
                                     <li key={index}>
                                         <a
                                             href={link.path}
-                                            className="text-gray-600 transition-colors hover:font-medium hover:text-indigo-600">
+                                            className="text-gray-600 transition-colors hover:text-indigo-600">
                                             {link.label}
                                         </a>
                                     </li>
@@ -178,7 +178,7 @@ export default function Footer() {
                                     </svg>
                                     <a
                                         href={`tel:${contacts.phone}`}
-                                        className="text-sm text-gray-600 transition-colors hover:font-medium hover:text-indigo-600">
+                                        className="text-sm text-gray-600 transition-colors hover:text-indigo-600">
                                         {contacts.phone}
                                     </a>
                                 </div>
@@ -199,7 +199,7 @@ export default function Footer() {
                                     </svg>
                                     <a
                                         href={`mailto:${contacts.email}`}
-                                        className="text-sm text-gray-600 transition-colors hover:font-medium hover:text-indigo-600">
+                                        className="text-sm text-gray-600 transition-colors hover:text-indigo-600">
                                         {contacts.email}
                                     </a>
                                 </div>

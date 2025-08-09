@@ -172,9 +172,9 @@ export const siteConfig = {
         email: 'info@vorthxdijital.com',
         phone: '+90 555 123 45 67',
         address: {
-            street: 'Maslak Mah. Büyükdere Cd.',
-            details: 'No:123 K:5 D:12',
-            city: 'Şişli/İstanbul',
+            street: 'R.Sevket İnce Mah. 1928 Sok.',
+            details: 'No:5 K:3 D:8',
+            city: 'Bayraklı/İzmir',
         },
         hours: {
             weekdays: 'Pzt-Cum: 09:00-18:00',

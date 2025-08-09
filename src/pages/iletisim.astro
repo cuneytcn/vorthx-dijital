@@ -184,9 +184,9 @@ const { contacts } = siteConfig;
                                 </p>
                                 <address
                                     class="font-medium text-pink-600 not-italic">
-                                    Maslak Mah. Büyükdere Cd.<br />
-                                    No:123 K:5 D:12<br />
-                                    Şişli/İstanbul
+                                    {contacts.address.street}<br />
+                                    {contacts.address.details}<br />
+                                    {contacts.address.city}
                                 </address>
                             </div>
                         </div>
@@ -313,6 +313,7 @@ const { contacts } = siteConfig;
                                     name="name"
                                     required
                                     class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
+                                    style="-webkit-appearance: none; -moz-appearance: none;"
                                     placeholder="Adınız ve soyadınız"
                                 />
                             </div>
@@ -330,6 +331,7 @@ const { contacts } = siteConfig;
                                     name="email"
                                     required
                                     class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
+                                    style="-webkit-appearance: none; -moz-appearance: none;"
                                     placeholder="ornek@email.com"
                                 />
                             </div>
@@ -346,6 +348,7 @@ const { contacts } = siteConfig;
                                     id="phone"
                                     name="phone"
                                     class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
+                                    style="-webkit-appearance: none; -moz-appearance: none;"
                                     placeholder="+90 555 123 45 67"
                                 />
                             </div>
@@ -361,7 +364,8 @@ const { contacts } = siteConfig;
                                     id="subject"
                                     name="subject"
                                     required
-                                    class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none">
+                                    class="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 pr-10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
+                                    style="-webkit-appearance: none; -moz-appearance: none;">
                                     <option value="">Konu seçin</option>
                                     <option value="web-tasarim"
                                         >Web Tasarım</option
@@ -376,6 +380,22 @@ const { contacts } = siteConfig;
                                     <option value="seo">SEO Hizmetleri</option>
                                     <option value="diger">Diğer</option>
                                 </select>
+                                <!-- Custom dropdown arrow -->
+                                <div
+                                    class="pointer-events-none absolute top-10 right-0 flex h-11 items-center px-3">
+                                    <svg
+                                        class="h-4 w-4 text-gray-400"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor">
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                                        ></path>
+                                    </svg>
+                                </div>
                             </div>
 
                             <!-- Mesaj -->
@@ -391,6 +411,7 @@ const { contacts } = siteConfig;
                                     rows="5"
                                     required
                                     class="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
+                                    style="-webkit-appearance: none; -moz-appearance: none;"
                                     placeholder="Projeniz hakkında detaylı bilgi verin..."
                                 ></textarea>
                             </div>

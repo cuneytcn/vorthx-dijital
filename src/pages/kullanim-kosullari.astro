@@ -1,5 +1,8 @@
 ---
+import { siteConfig } from '../config/site.config';
 import PageLayout from '../layout/page.layout.astro';
+
+const { contacts } = siteConfig;
 ---
 
 <PageLayout>
@@ -244,16 +247,19 @@ import PageLayout from '../layout/page.layout.astro';
                 <!-- İletişim -->
                 <h2>13. İletişim Bilgileri</h2>
                 <div class="rounded-lg bg-gray-50 p-6">
-                    <p class="mb-2"><strong>Şirket:</strong> VorthX Dijital</p>
                     <p class="mb-2">
-                        <strong>E-posta:</strong> info@vorthxdijital.com
+                        <strong>E-posta:</strong>
+                        {contacts.email}
                     </p>
                     <p class="mb-2">
-                        <strong>Telefon:</strong> +90 555 123 45 67
+                        <strong>Telefon:</strong>
+                        {contacts.phone}
                     </p>
                     <p class="mb-0">
-                        <strong>Adres:</strong> Maslak Mah. Büyükdere Cd. No:123
-                        K:5 D:12 Şişli/İstanbul
+                        <strong>Adres:</strong>
+                        {contacts.address.street}<br />
+                        {contacts.address.details}<br />
+                        {contacts.address.city}
                     </p>
                 </div>
             </div>
