@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import ProjectsFilter from './components/projects-filter';
 
-export default function ProjelerimizPage() {
+export default function Page() {
     const projects = [
         {
             id: 1,

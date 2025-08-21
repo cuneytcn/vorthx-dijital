@@ -28,11 +28,11 @@ export const siteConfig = {
         linkedin: 'https://linkedin.com/company/vorthxdijital',
         twitter: 'https://twitter.com/vorthxdijital',
         instagram: 'https://instagram.com/vorthxdijital',
-        whatsapp: 'https://wa.me/1234567890',
+        whatsapp: 'https://wa.me/05317942192',
     },
     contact: {
         email: 'info@vorthxdijital.com',
-        phone: '+90 123 456 7890',
+        phone: '+90 0 (531) 794 21 92',
         address: 'R.Sevket İnce Mah. 1928 Sok. , No:5 K:3 D:8 , Bayraklı/İzmir',
     },
     workingHours: {

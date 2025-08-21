@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     robots: 'index, follow',
 };
 
-export default function CookiePolicyPage() {
+export default function Page() {
     return (
         <div className="min-h-screen bg-white">
             <div className="container mx-auto px-4 pt-24 pb-16">

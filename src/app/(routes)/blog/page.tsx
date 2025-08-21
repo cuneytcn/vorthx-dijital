@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function BlogPage() {
+export default function Page() {
     const featuredPost = {
         id: 1,
         title: '2024 Web Tasarım Trendleri: Geleceğin Dijital Deneyimleri',

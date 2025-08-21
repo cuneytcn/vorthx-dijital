@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function HakkimizdaPage() {
+export default function Page() {
     const team = [
         {
             name: 'Ahmet Yılmaz',

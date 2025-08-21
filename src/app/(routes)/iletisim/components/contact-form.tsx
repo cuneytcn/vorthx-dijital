@@ -61,7 +61,7 @@ export default function ContactForm() {
                 throw new Error(result.message || 'Form gönderilemedi');
             }
 
-            console.log('Form başarıyla gönderildi:', result);
+            // console.log('Form başarıyla gönderildi:', result);
 
             setIsSubmitted(true);
             reset(); // Formu temizle

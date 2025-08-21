@@ -1,7 +1,7 @@
 import ContactForm from '@/app/(routes)/iletisim/components/contact-form';
 import { siteConfig } from '@/config/site.config';
 
-export default function IletisimPage() {
+export default function Page() {
     const faqs = [
         {
             question: 'Proje süresi ne kadar?',

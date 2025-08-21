@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function HizmetlerimizPage() {
+export default function Page() {
     const services = [
         {
             id: 'web-tasarim',
