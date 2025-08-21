@@ -1,5 +1,5 @@
-import { submitContactToWordPress } from '@/lib/wordpress';
 import { NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 import { z } from 'zod';
 
 // Form validation schema
@@ -13,54 +13,86 @@ const contactSchema = z.object({
     message: z.string().min(10, 'Mesajınız en az 10 karakter olmalıdır'),
 });
 
+// Mail gönderim fonksiyonu
+async function sendContactMail(data: any) {
+    // Mail transporter (örnek: Gmail SMTP, kendi bilgilerinle değiştir)
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+            user: process.env.CONTACT_MAIL_USER,
+            pass: process.env.CONTACT_MAIL_PASSWORD,
+        },
+    });
+
+    // Mobil uyumlu, kutu görünümlü ve modern mail template
+    const html = `
+            <div style="font-family: Arial, sans-serif; background: #f4f6fb; padding: 16px;">
+                <div style="max-width: 480px; margin: auto; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 18px;">
+                    <h2 style="color: #2a4d8f; margin-bottom: 18px; text-align:center; font-size: 1.4rem; letter-spacing:1px;">Yeni İletişim Formu Mesajı</h2>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="background: #f7f9fc; border-radius: 8px; padding: 12px 14px; font-size: 1rem;">
+                            <strong style="color:#2a4d8f; width:110px; display:inline-block;">Ad Soyad:</strong> ${data.name}
+                        </div>
+                        <div style="background: #f7f9fc; border-radius: 8px; padding: 12px 14px; font-size: 1rem;">
+                            <strong style="color:#2a4d8f; width:110px; display:inline-block;">E-posta:</strong> ${data.email}
+                        </div>
+                        <div style="background: #f7f9fc; border-radius: 8px; padding: 12px 14px; font-size: 1rem;">
+                            <strong style="color:#2a4d8f; width:110px; display:inline-block;">Telefon:</strong> ${data.phone || '-'}
+                        </div>
+                        <div style="background: #f7f9fc; border-radius: 8px; padding: 12px 14px; font-size: 1rem;">
+                            <strong style="color:#2a4d8f; width:110px; display:inline-block;">Şirket:</strong> ${data.company || '-'}
+                        </div>
+                        <div style="background: #f7f9fc; border-radius: 8px; padding: 12px 14px; font-size: 1rem;">
+                            <strong style="color:#2a4d8f; width:110px; display:inline-block;">Hizmet:</strong> ${data.service}
+                        </div>
+                        <div style="background: #f7f9fc; border-radius: 8px; padding: 12px 14px; font-size: 1rem;">
+                            <strong style="color:#2a4d8f; width:110px; display:inline-block;">Bütçe:</strong> ${data.budget || '-'}
+                        </div>
+                        <div style="background: #eaf1fb; border-radius: 8px; padding: 14px 16px; font-size: 1.05rem; color: #333;">
+                            <strong style="color:#2a4d8f; width:110px; display:inline-block;">Mesaj:</strong><br>
+                            <span style="display:block; margin-top:6px;">${data.message}</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 24px; text-align: center; color: #aaa; font-size: 13px;">
+                        Vorthx Dijital | İletişim Formu
+                    </div>
+                </div>
+            </div>
+        `;
+
+    // Mail options
+    const mailOptions = {
+        from: `Vorthx Dijital <${process.env.CONTACT_MAIL_USER}>`,
+        to: process.env.CONTACT_MAIL_RECEIVER, // Senin mail adresin
+        subject: 'Yeni İletişim Formu Mesajı',
+        html,
+    };
+
+    // Mail gönder
+    return transporter.sendMail(mailOptions);
+}
+
 export async function POST(request: NextRequest) {
     try {
-        // Request body'yi parse et
         const body = await request.json();
-
-        // Zod ile validasyon
         const validatedData = contactSchema.parse(body);
 
-        // WordPress'e gönder
-        const wpResponse = await submitContactToWordPress(validatedData);
+        // Mail gönder
+        await sendContactMail(validatedData);
 
-        if (!wpResponse.success) {
-            // WordPress'e gönderilemedi ama local olarak loglayalım
-            console.error("WordPress'e gönderim başarısız:", wpResponse.error);
-            console.log('Form verisi (local backup):', validatedData);
-
-            // Kullanıcıya başarılı mesaj dön (fallback)
-            return NextResponse.json(
-                {
-                    success: true,
-                    message:
-                        'Mesajınız alındı. En kısa sürede dönüş yapılacaktır.',
-                    data: validatedData,
-                    warning:
-                        'WordPress bağlantısı sağlanamadı, mesajınız kayıt altına alındı.',
-                },
-                { status: 200 }
-            );
-        }
-
-        // WordPress'e başarılı gönderim
-        console.log("WordPress'e başarıyla gönderildi:", wpResponse.data);
-
-        // Başarılı yanıt
         return NextResponse.json(
             {
                 success: true,
                 message:
-                    'Mesajınız başarıyla alındı. En kısa sürede dönüş yapılacaktır.',
+                    'Mesajınız başarıyla gönderildi. En kısa sürede dönüş yapılacaktır.',
                 data: validatedData,
-                wordpress_id: wpResponse.data?.id,
             },
             { status: 200 }
         );
     } catch (error) {
         console.error('İletişim formu hatası:', error);
-
-        // Zod validation hatası
         if (error instanceof z.ZodError) {
             return NextResponse.json(
                 {
@@ -71,8 +103,6 @@ export async function POST(request: NextRequest) {
                 { status: 400 }
             );
         }
-
-        // Genel hata
         return NextResponse.json(
             {
                 success: false,
@@ -87,11 +117,11 @@ export async function POST(request: NextRequest) {
 export async function GET() {
     return NextResponse.json(
         {
-            message: 'Contact API with WordPress integration',
+            message: 'Contact API with Nodemailer integration',
             endpoints: {
-                POST: '/api/contact - İletişim formu göndermek için (WordPress entegreli)',
+                POST: '/api/contact - İletişim formu göndermek için (mail ile)',
             },
-            wordpress_status: 'configured',
+            mail_status: 'configured',
         },
         { status: 200 }
     );

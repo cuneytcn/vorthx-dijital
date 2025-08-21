@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     ) {
         const secret = process.env.NEXT_PUBLIC_AUTH_SCREET || '';
         const hashedSecret = bcrypt.hashSync(secret, 10);
-        cookies().set('auth', hashedSecret, {
+        (await cookies()).set('auth', hashedSecret, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             maxAge: 60 * 60, // 1 saat

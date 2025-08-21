@@ -65,8 +65,6 @@ export default function ContactForm() {
 
             setIsSubmitted(true);
             reset(); // Formu temizle
-
-            // 5 saniye sonra başarı mesajını gizle
             setTimeout(() => {
                 setIsSubmitted(false);
             }, 5000);
@@ -130,7 +128,7 @@ export default function ContactForm() {
                         }`}
                         placeholder="Adınız ve soyadınız"
                     />
-                    {errors.name && (
+                    {errors.name && isSubmitted && (
                         <div className="mt-2 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
                             <svg
                                 className="h-4 w-4 flex-shrink-0 text-red-500"
@@ -163,7 +161,7 @@ export default function ContactForm() {
                         }`}
                         placeholder="ornek@email.com"
                     />
-                    {errors.email && (
+                    {errors.email && isSubmitted && (
                         <div className="mt-2 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
                             <svg
                                 className="h-4 w-4 flex-shrink-0 text-red-500"
@@ -198,7 +196,7 @@ export default function ContactForm() {
                         }`}
                         placeholder="+90 (555) 123 45 67"
                     />
-                    {errors.phone && (
+                    {errors.phone && isSubmitted && (
                         <div className="mt-2 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
                             <svg
                                 className="h-4 w-4 flex-shrink-0 text-red-500"
@@ -231,7 +229,7 @@ export default function ContactForm() {
                         }`}
                         placeholder="Şirket adınız"
                     />
-                    {errors.company && (
+                    {errors.company && isSubmitted && (
                         <div className="mt-2 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
                             <svg
                                 className="h-4 w-4 flex-shrink-0 text-red-500"
@@ -277,7 +275,7 @@ export default function ContactForm() {
                         </option>
                         <option value="diger">Diğer</option>
                     </select>
-                    {errors.service && (
+                    {errors.service && isSubmitted && (
                         <div className="mt-2 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
                             <svg
                                 className="h-4 w-4 flex-shrink-0 text-red-500"
@@ -314,7 +312,7 @@ export default function ContactForm() {
                         <option value="50000-100000">50.000₺ - 100.000₺</option>
                         <option value="100000+">100.000₺+</option>
                     </select>
-                    {errors.budget && (
+                    {errors.budget && isSubmitted && (
                         <div className="mt-2 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
                             <svg
                                 className="h-4 w-4 flex-shrink-0 text-red-500"
@@ -349,7 +347,7 @@ export default function ContactForm() {
                     }`}
                     placeholder="Projeniz hakkında detaylı bilgi verin..."
                 />
-                {errors.message && (
+                {errors.message && isSubmitted && (
                     <div className="mt-2 flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
                         <svg
                             className="h-4 w-4 flex-shrink-0 text-red-500"
