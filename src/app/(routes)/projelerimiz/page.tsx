@@ -1,5 +1,5 @@
-import ProjectsFilter from '@/components/projects/projects-filter';
 import Link from 'next/link';
+import ProjectsFilter from './components/projects-filter';
 
 export default function ProjelerimizPage() {
     const projects = [

@@ -1,6 +1,6 @@
-import Footer from '@/components/shared/footer';
-import GoToTopButton from '@/components/shared/go-to-top';
-import Header from '@/components/shared/header';
+import Footer from '@/components/footer';
+import GoToTopButton from '@/components/go-to-top';
+import Header from '@/components/header';
 import React from 'react';
 
 export default function RoutesLayout({

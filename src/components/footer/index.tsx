@@ -1,6 +1,6 @@
 import { siteConfig } from '@/config/site.config';
 import Link from 'next/link';
-import Newsletter from '../newsletter';
+import Newsletter from './components/newsletter';
 
 export default function Footer() {
     return (
