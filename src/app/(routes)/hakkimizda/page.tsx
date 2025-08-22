@@ -3,28 +3,28 @@ import Link from 'next/link';
 export default function Page() {
     const team = [
         {
-            name: 'Ahmet Yılmaz',
+            name: 'Cüneyt Cengiz',
             role: 'Kurucu & CEO',
             bio: '10+ yıllık teknoloji deneyimi ile dijital dünyada innovatif çözümler geliştiriyor.',
             image: '/team/ceo.jpg',
             skills: ['Strateji', 'İnovasyon', 'Liderlik'],
         },
         {
-            name: 'Ayşe Demir',
+            name: 'Aslı Deri',
             role: 'Kreatif Direktör',
             bio: 'Yaratıcı tasarımları ile markaları dijital dünyada öne çıkarıyor.',
             image: '/team/creative.jpg',
             skills: ['UI/UX', 'Branding', 'Yaratıcılık'],
         },
         {
-            name: 'Mehmet Kaya',
+            name: 'Osman Yılmaz',
             role: 'Teknik Direktör',
             bio: 'En güncel teknolojilerle performanslı ve güvenli çözümler geliştiriyor.',
             image: '/team/tech.jpg',
             skills: ['Development', 'DevOps', 'Security'],
         },
         {
-            name: 'Zeynep Arslan',
+            name: 'Buse Cengiz',
             role: 'Dijital Pazarlama Uzmanı',
             bio: 'Veri odaklı yaklaşımlarla markaları hedef kitlelerine ulaştırıyor.',
             image: '/team/marketing.jpg',

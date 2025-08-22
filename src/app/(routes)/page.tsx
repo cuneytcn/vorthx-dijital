@@ -23,7 +23,7 @@ export default function Page() {
                         }}></div>
                 </div>
 
-                <div className="relative container mx-auto flex min-h-screen items-center px-6 py-20 lg:px-8 lg:py-32">
+                <div className="relative container mx-auto flex min-h-screen items-center px-6 py-24 lg:px-8 lg:py-32">
                     <div className="grid w-full grid-cols-1 gap-20 lg:grid-cols-2 lg:gap-24">
                         <div className="flex flex-col justify-center space-y-8">
                             {/* Badge */}

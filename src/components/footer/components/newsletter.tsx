@@ -13,15 +13,25 @@ export default function Newsletter() {
 
         setIsSubmitting(true);
 
-        // Simulate submission
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-
+        try {
+            const res = await fetch('/api/newsletter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+            if (res.ok) {
+                setIsSubmitted(true);
+                setEmail('');
+                setTimeout(() => setIsSubmitted(false), 3000);
+            } else {
+                // Hata mesajı eklenebilir
+            }
+        } catch (err) {
+            // Hata mesajı eklenebilir
+        }
         setIsSubmitting(false);
-        setIsSubmitted(true);
-        setEmail('');
-
-        // Reset success message after 3 seconds
-        setTimeout(() => setIsSubmitted(false), 3000);
     };
 
     return (
