@@ -155,8 +155,8 @@ export default function Page() {
                             <p className="mb-4 leading-relaxed text-gray-700">
                                 Web sitemizdeki tüm içerikler (yazılar,
                                 görseller, logolar, tasarımlar) Vorthx
-                                Dijital'in fikri mülkiyetidir. İzinsiz kullanım
-                                yasaktır.
+                                Dijital&apos;in fikri mülkiyetidir. İzinsiz
+                                kullanım yasaktır.
                             </p>
 
                             <h3 className="mb-2 text-xl font-medium text-gray-800">

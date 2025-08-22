@@ -165,7 +165,7 @@ export default function Page() {
                                     )}
                                 </div>
                                 <p className="mb-6 text-lg leading-relaxed text-indigo-100">
-                                    "{testimonial.text}"
+                                    &ldquo;{testimonial.text}&rdquo;
                                 </p>
                                 <div>
                                     <div className="font-bold text-white">

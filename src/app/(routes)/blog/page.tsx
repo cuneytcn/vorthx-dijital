@@ -11,6 +11,8 @@ export default async function BlogPage() {
     const featuredPost = {
         id: 1,
         title: '2024 Web Tasarım Trendleri: Geleceğin Dijital Deneyimleri',
+        description:
+            'Bu yıl web tasarımında öne çıkan trendler ve gelecek yıla dair öngörüler...',
         excerpt:
             'Bu yıl web tasarımında öne çıkan trendler ve gelecek yıla dair öngörüler...',
         category: 'Web Tasarım',
@@ -19,12 +21,16 @@ export default async function BlogPage() {
         readTime: '8 dk okuma',
         image: '/blog/featured.jpg',
         tags: ['Web Tasarım', 'Trendler', '2024'],
+        gradient: 'from-blue-500 to-indigo-600',
+        slug: '2024-web-tasarim-trendleri',
     };
 
     const posts = [
         {
             id: 2,
             title: 'SEO Optimizasyonu: Google İlk Sırada Görünme Rehberi',
+            description:
+                "Web sitenizin Google'da üst sıralarda yer alması için uygulamanız gereken stratejiler...",
             excerpt:
                 "Web sitenizin Google'da üst sıralarda yer alması için uygulamanız gereken stratejiler...",
             category: 'SEO',
@@ -34,10 +40,13 @@ export default async function BlogPage() {
             image: '/blog/seo.jpg',
             tags: ['SEO', 'Google', 'Optimizasyon'],
             gradient: 'from-green-500 to-emerald-600',
+            slug: 'seo-optimizasyonu-google-ilk-sirada',
         },
         {
             id: 3,
             title: "React vs Vue.js: Hangi Framework'ü Seçmeli?",
+            description:
+                "Modern web geliştirmede en popüler iki framework'ün detaylı karşılaştırması...",
             excerpt:
                 "Modern web geliştirmede en popüler iki framework'ün detaylı karşılaştırması...",
             category: 'Geliştirme',
@@ -47,10 +56,13 @@ export default async function BlogPage() {
             image: '/blog/react-vue.jpg',
             tags: ['React', 'Vue.js', 'Frontend'],
             gradient: 'from-blue-500 to-cyan-600',
+            slug: 'react-vs-vuejs-karsilastirma',
         },
         {
             id: 4,
             title: 'E-Ticaret Sitesi Nasıl Kurulur? Adım Adım Rehber',
+            description:
+                'Sıfırdan e-ticaret sitesi kurma sürecinin tüm detayları ve ipuçları...',
             excerpt:
                 'Sıfırdan e-ticaret sitesi kurma sürecinin tüm detayları ve ipuçları...',
             category: 'E-Ticaret',
@@ -60,10 +72,13 @@ export default async function BlogPage() {
             image: '/blog/ecommerce.jpg',
             tags: ['E-Ticaret', 'Online Satış', 'Web Tasarım'],
             gradient: 'from-purple-500 to-pink-600',
+            slug: 'e-ticaret-sitesi-kurma-rehberi',
         },
         {
             id: 5,
             title: 'Mobil Uygulama Geliştirme: Native vs Hybrid',
+            description:
+                'Mobil uygulama geliştirmede doğru yaklaşımı seçmek için bilmeniz gerekenler...',
             excerpt:
                 'Mobil uygulama geliştirmede doğru yaklaşımı seçmek için bilmeniz gerekenler...',
             category: 'Mobil',
@@ -73,10 +88,13 @@ export default async function BlogPage() {
             image: '/blog/mobile.jpg',
             tags: ['Mobil', 'Native', 'Hybrid'],
             gradient: 'from-orange-500 to-red-600',
+            slug: 'mobil-uygulama-native-vs-hybrid',
         },
         {
             id: 6,
             title: 'Dijital Pazarlama Stratejileri: 2024 Rehberi',
+            description:
+                'Başarılı dijital pazarlama kampanyaları için uygulamanız gereken stratejiler...',
             excerpt:
                 'Başarılı dijital pazarlama kampanyaları için uygulamanız gereken stratejiler...',
             category: 'Pazarlama',
@@ -86,10 +104,13 @@ export default async function BlogPage() {
             image: '/blog/marketing.jpg',
             tags: ['Dijital Pazarlama', 'Strateji', 'ROI'],
             gradient: 'from-indigo-500 to-purple-600',
+            slug: 'dijital-pazarlama-stratejileri-2024',
         },
         {
             id: 7,
             title: 'UI/UX Tasarımında Renk Psikolojisi',
+            description:
+                'Renklerin kullanıcı deneyimi üzerindeki etkisi ve doğru renk paleti seçimi...',
             excerpt:
                 'Renklerin kullanıcı deneyimi üzerindeki etkisi ve doğru renk paleti seçimi...',
             category: 'UI/UX',
@@ -99,6 +120,7 @@ export default async function BlogPage() {
             image: '/blog/colors.jpg',
             tags: ['UI/UX', 'Renk', 'Psikoloji'],
             gradient: 'from-pink-500 to-rose-600',
+            slug: 'ui-ux-renk-psikolojisi',
         },
     ];
 

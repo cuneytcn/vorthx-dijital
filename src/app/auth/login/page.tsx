@@ -48,7 +48,7 @@ export default function Page() {
             } else {
                 setError(result.message || 'Giriş başarısız');
             }
-        } catch (err) {
+        } catch {
             setError('Sunucu hatası');
         }
         setLoading(false);

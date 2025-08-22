@@ -1,5 +1,6 @@
 import { ArrowRight, Clock, Star, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { ComponentType } from 'react';
 
 interface Service {
     name: string;
@@ -12,7 +13,7 @@ interface Service {
 interface ServiceCategory {
     name: string;
     description?: string;
-    icon?: any;
+    icon?: ComponentType<{ className?: string }>;
     services: Service[];
 }
 
@@ -23,7 +24,9 @@ interface AdditionalServicesProps {
 export default function AdditionalServices({
     additionalServices,
 }: AdditionalServicesProps) {
-    const getCategoryIcon = (categoryName: string) => {
+    const getCategoryIcon = (
+        categoryName: string
+    ): ComponentType<{ className?: string }> => {
         switch (categoryName.toLowerCase()) {
             case 'tek seferlik hizmetler':
                 return Zap;

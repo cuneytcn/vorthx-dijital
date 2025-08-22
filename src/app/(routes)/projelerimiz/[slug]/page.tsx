@@ -322,13 +322,14 @@ const projects = [
 ];
 
 interface PageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
-export default function ProjectDetailPage({ params }: PageProps) {
-    const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectDetailPage({ params }: PageProps) {
+    const { slug } = await params;
+    const project = projects.find((p) => p.slug === slug);
 
     if (!project) {
         notFound();

@@ -279,6 +279,7 @@ export default function Page() {
 
                             const icons = [
                                 <svg
+                                    key="monitor"
                                     className="h-8 w-8"
                                     fill="none"
                                     stroke="currentColor"
@@ -291,6 +292,7 @@ export default function Page() {
                                     />
                                 </svg>,
                                 <svg
+                                    key="lock"
                                     className="h-8 w-8"
                                     fill="none"
                                     stroke="currentColor"
@@ -303,6 +305,7 @@ export default function Page() {
                                     />
                                 </svg>,
                                 <svg
+                                    key="mobile"
                                     className="h-8 w-8"
                                     fill="none"
                                     stroke="currentColor"
@@ -315,6 +318,7 @@ export default function Page() {
                                     />
                                 </svg>,
                                 <svg
+                                    key="trending"
                                     className="h-8 w-8"
                                     fill="none"
                                     stroke="currentColor"
@@ -327,6 +331,7 @@ export default function Page() {
                                     />
                                 </svg>,
                                 <svg
+                                    key="briefcase"
                                     className="h-8 w-8"
                                     fill="none"
                                     stroke="currentColor"
@@ -339,6 +344,7 @@ export default function Page() {
                                     />
                                 </svg>,
                                 <svg
+                                    key="bar-chart"
                                     className="h-8 w-8"
                                     fill="none"
                                     stroke="currentColor"

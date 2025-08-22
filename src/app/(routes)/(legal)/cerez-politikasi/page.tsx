@@ -302,7 +302,8 @@ export default function Page() {
                                 </li>
                                 <li>Tarayıcınızın ayarlar menüsünden</li>
                                 <li>
-                                    Çerez banner'ındaki seçenekleri kullanarak
+                                    Çerez banner&apos;ındaki seçenekleri
+                                    kullanarak
                                 </li>
                             </ul>
 
@@ -314,20 +315,20 @@ export default function Page() {
                             </p>
                             <ul className="mb-4 list-disc pl-6 text-gray-700">
                                 <li>
-                                    <strong>Chrome:</strong> Ayarlar {'>'}{' '}
-                                    Gizlilik ve güvenlik {'>'} Çerezler
+                                    <strong>Chrome:</strong> Ayarlar &gt;
+                                    Gizlilik ve güvenlik &gt; Çerezler
                                 </li>
                                 <li>
-                                    <strong>Firefox:</strong> Ayarlar {'>'}{' '}
-                                    Gizlilik ve Güvenlik {'>'} Çerezler
+                                    <strong>Firefox:</strong> Ayarlar &gt;
+                                    Gizlilik ve Güvenlik &gt; Çerezler
                                 </li>
                                 <li>
-                                    <strong>Safari:</strong> Tercihler {'>'}{' '}
-                                    Gizlilik {'>'} Çerezler
+                                    <strong>Safari:</strong> Tercihler &gt;
+                                    Gizlilik &gt; Çerezler
                                 </li>
                                 <li>
-                                    <strong>Edge:</strong> Ayarlar {'>'}{' '}
-                                    Çerezler ve site izinleri
+                                    <strong>Edge:</strong> Ayarlar &gt; Çerezler
+                                    ve site izinleri
                                 </li>
                             </ul>
                         </section>
@@ -432,7 +433,8 @@ export default function Page() {
                             <p className="mb-4 text-blue-800">
                                 Çerez tercihlerinizi istediğiniz zaman
                                 değiştirebilirsiniz. Sayfanın alt kısmındaki
-                                "Çerez Ayarları" bağlantısını kullanın.
+                                &ldquo;Çerez Ayarları&rdquo; bağlantısını
+                                kullanın.
                             </p>
                             <CookieModal />
                         </div>

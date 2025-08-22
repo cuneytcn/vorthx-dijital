@@ -2,7 +2,7 @@
 
 import { ArrowRight, Check } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { ComponentType, useState } from 'react';
 
 interface PricingPlan {
     name: string;
@@ -11,7 +11,7 @@ interface PricingPlan {
     period: string;
     features: string[];
     popular: boolean;
-    icon: any;
+    icon: ComponentType<{ className?: string }>;
     gradient: string;
     color: string;
 }

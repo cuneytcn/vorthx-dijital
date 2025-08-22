@@ -13,8 +13,10 @@ const contactSchema = z.object({
     message: z.string().min(10, 'Mesajınız en az 10 karakter olmalıdır'),
 });
 
+type ContactData = z.infer<typeof contactSchema>;
+
 // Mail gönderim fonksiyonu
-async function sendContactMail(data: any) {
+async function sendContactMail(data: ContactData) {
     // Mail transporter (örnek: Gmail SMTP, kendi bilgilerinle değiştir)
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
