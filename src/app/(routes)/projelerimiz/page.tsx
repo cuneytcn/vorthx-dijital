@@ -5,6 +5,7 @@ export default function Page() {
     const projects = [
         {
             id: 1,
+            slug: 'e-ticaret-platformu',
             title: 'E-Ticaret Platformu',
             category: 'E-Ticaret',
             description:
@@ -17,6 +18,7 @@ export default function Page() {
         },
         {
             id: 2,
+            slug: 'kurumsal-web-sitesi',
             title: 'Kurumsal Web Sitesi',
             category: 'Web Tasarım',
             description: 'Responsive ve SEO optimize kurumsal web sitesi',
@@ -28,6 +30,7 @@ export default function Page() {
         },
         {
             id: 3,
+            slug: 'mobil-fitness-uygulamasi',
             title: 'Mobil Fitness Uygulaması',
             category: 'Mobil Uygulama',
             description: 'iOS ve Android fitness takip uygulaması',
@@ -39,6 +42,7 @@ export default function Page() {
         },
         {
             id: 4,
+            slug: 'restaurant-yonetim-sistemi',
             title: 'Restaurant Yönetim Sistemi',
             category: 'Web Uygulama',
             description: 'Kompleks restaurant yönetim ve sipariş sistemi',
@@ -50,6 +54,7 @@ export default function Page() {
         },
         {
             id: 5,
+            slug: 'fintech-dashboard',
             title: 'Fintech Dashboard',
             category: 'Web Uygulama',
             description: 'Finansal verileri analiz eden admin paneli',
@@ -61,6 +66,7 @@ export default function Page() {
         },
         {
             id: 6,
+            slug: 'egitim-platformu',
             title: 'Eğitim Platformu',
             category: 'Web Uygulama',
             description: 'Online eğitim ve kurs yönetim platformu',

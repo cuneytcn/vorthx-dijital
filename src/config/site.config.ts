@@ -67,8 +67,8 @@ export const siteConfig = {
             href: '/projelerimiz',
         },
         {
-            name: 'Blog',
-            href: '/blog',
+            name: 'Fiyatlandırma',
+            href: '/fiyatlandirma',
         },
         {
             name: 'Hakkımızda',

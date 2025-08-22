@@ -1,9 +1,11 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 interface Project {
     id: number;
+    slug: string;
     title: string;
     category: string;
     description: string;
@@ -133,7 +135,8 @@ export default function ProjectsFilter({ projects }: ProjectsFilterProps) {
                                 </div>
 
                                 {/* View Project Button */}
-                                <button
+                                <Link
+                                    href={`/projelerimiz/${project.slug}`}
                                     className={`group/btn flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r ${project.gradient} px-6 py-4 font-bold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl`}>
                                     Projeyi Görüntüle
                                     <svg
@@ -148,7 +151,7 @@ export default function ProjectsFilter({ projects }: ProjectsFilterProps) {
                                             d="M17 8l4 4m0 0l-4 4m4-4H3"
                                         />
                                     </svg>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     ))}

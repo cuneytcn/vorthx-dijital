@@ -41,10 +41,10 @@ export default function Page() {
             const result = await res.json();
             if (result.success) {
                 setSuccess(true);
-                reset();
                 setTimeout(() => {
                     router.push('/keystatic');
                 }, 1200);
+                reset();
             } else {
                 setError(result.message || 'Giriş başarısız');
             }

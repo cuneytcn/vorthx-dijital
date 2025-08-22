@@ -1,4 +1,4 @@
-import { collection, config, fields } from '@keystatic/core';
+import { config } from '@keystatic/core';
 
 export default config({
     storage: {
@@ -9,16 +9,5 @@ export default config({
             name: 'Vorthx Dijital',
         },
     },
-    collections: {
-        posts: collection({
-            label: 'Posts',
-            slugField: 'title',
-            path: 'src/content/posts/*',
-            format: { contentField: 'content' },
-            schema: {
-                title: fields.slug({ name: { label: 'Title' } }),
-                content: fields.markdoc({ label: 'Content' }),
-            },
-        }),
-    },
+    collections: {},
 });
