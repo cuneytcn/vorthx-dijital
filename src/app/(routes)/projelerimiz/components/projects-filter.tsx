@@ -1,20 +1,8 @@
 'use client';
 
+import { Project } from '@/lib/wordpress/types';
 import Link from 'next/link';
 import { useState } from 'react';
-
-interface Project {
-    id: number;
-    slug: string;
-    title: string;
-    category: string;
-    description: string;
-    image: string;
-    technologies: string[];
-    year: string;
-    status: string;
-    gradient: string;
-}
 
 interface ProjectsFilterProps {
     projects: Project[];
@@ -61,7 +49,7 @@ export default function ProjectsFilter({ projects }: ProjectsFilterProps) {
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
                     {filteredProjects.map((project, index) => (
                         <div
-                            key={project.id}
+                            key={project.slug}
                             className="group relative overflow-hidden rounded-3xl bg-white shadow-xl transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl"
                             style={{ animationDelay: `${index * 100}ms` }}>
                             {/* Project Image */}
